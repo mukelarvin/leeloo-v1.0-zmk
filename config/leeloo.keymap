@@ -12,6 +12,103 @@
 #define DEFAULT    0       // default_layer
 #define LOWER      1       // lower_layer
 #define RAISE      2       // raise_layer
+#define DV_A A
+#define DV_B N
+#define DV_C I
+#define DV_D H
+#define DV_E D
+#define DV_F Y
+#define DV_G U
+#define DV_H J
+#define DV_I G
+#define DV_J C
+#define DV_K V
+#define DV_L P
+#define DV_M M
+#define DV_N L
+#define DV_O S
+#define DV_P R
+#define DV_Q X
+#define DV_R O
+#define DV_S SEMI
+#define DV_T K
+#define DV_U F
+#define DV_V DOT
+#define DV_W COMMA
+#define DV_X B
+#define DV_Y T
+#define DV_Z FSLH
+#define DV_SEMI Z
+#define DV_SQT Q
+#define DV_COMMA W
+#define DV_DOT E
+#define DV_FSLH LBKT
+#define DV_QMARK LBRC
+#define DV_MINUS SQT
+#define DV_UNDER DQT
+#define DV_EQUAL RBKT
+#define DV_PLUS RBRC
+#define DV_LBKT MINUS
+#define DV_RBKT EQUAL
+#define DV_LBRC UNDER
+#define DV_RBRC PLUS
+
+#define SYMBOLS 1
+#define NUMBERS 2
+#define NAVETC 3
+/ {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping_term_ms = <150>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+};
+
+/ {
+        combos {
+               compatible = "zmk,combos";
+               combo_enter {
+                           timeout-ms = <50>;
+                           key-positions = <7 8 9>;
+                           bindings = <&kp ENTER>;
+               };
+               combo_lpar {
+                           timeout-ms = <50>;
+                           key-positions = <3 4>; 
+                           bindings = <&kp LPAR>;
+               };
+               combo_rpar {
+                           timeout-ms = <50>;
+                           key-positions = <7 8>;
+                           bindings = <&kp RPAR>;
+               };
+               combo_lbkt {
+                           timeout-ms = <50>;
+                           key-positions = <2 3>;
+                           bindings = <&kp DV_LBKT>;
+               };
+               combo_rbkt {
+                           timeout-ms = <50>;
+                           key-positions = <8 9>;
+                           bindings = <&kp DV_RBKT>;
+               };
+               combo_lbrc {
+                           timeout-ms = <50>;
+                           key-positions = <1 2>;
+                           bindings = <&kp DV_LBRC>;
+               };
+               combo_rbrc {
+                           timeout-ms = <50>;
+                           key-positions = <9 10>;
+                           bindings = <&kp DV_RBRC>;
+               };
+        };
+};
 
 / {
 

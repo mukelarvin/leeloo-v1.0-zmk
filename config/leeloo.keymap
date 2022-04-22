@@ -13,6 +13,11 @@
 #define LOWER      1       // lower_layer
 #define RAISE      2       // raise_layer
 
+&mt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
+};
+
 / {
         combos {
                compatible = "zmk,combos";

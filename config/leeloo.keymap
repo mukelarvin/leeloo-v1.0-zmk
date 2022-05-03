@@ -40,7 +40,7 @@
 &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSLH
 &kp LCTRL  &kp A      &kp S      &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z      &kp X      &mt LC(C) C      &mt LC(V) V  &kp B                    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
-                   &kp LGUI   &kp LALT  &kp BSPC  &mo LOWER  &kp LBKT    &kp RBKT   &lt RAISE ENTER  &kp SPACE  &kp MINUS   &kp EQUAL
+                   &kp LGUI   &kp LALT  &lt RAISE BSPC  &lt LOWER DEL &none    &none   &lt LOWER ENTER  &kt RAISE SPACE  &kp MINUS   &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -60,10 +60,10 @@
 
         raise_layer {
             bindings = <
-&trans     &trans     &trans     &trans     &trans     &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans     &trans     &trans     &trans     &trans     &trans                           &trans        &trans        &kp C_VOL_UP  &trans        &reset        &bootloader
-&trans     &trans     &trans     &trans     &trans     &trans                           &trans        &trans        &kp C_VOL_DN  &trans        &trans        &bt BT_CLR
-&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                           &trans        &trans        &trans        &trans        &trans        &trans
+&bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &trans        &trans        &trans        &trans       &trans        &trans
+&trans     &trans     &trans     &trans     &trans     &trans                           &kp LBKT      &kp RBKT      &kp LBRC      &kp RBRC     &kp LESS_THAN &kp GREATER_THAN 
+&trans     &trans     &trans     &trans     &trans     &trans                           &kp MINUS     &kp EQUAL     &kp LPAR      &kp RPAR     &trans        &trans
+&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                           &kp UNDER     &kp PLUS      &kp PIPE      &kp GRAVE    &trans        &trans
                       &trans     &trans     &trans     &trans     &trans     &trans     &trans        &trans        &trans        &trans
             >;
 

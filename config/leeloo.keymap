@@ -14,7 +14,7 @@
 #define RAISE      2       // raise_layer
 
 &mt {
-    flavor = "tap-preffered";
+    flavor = "tap-preferred";
     tapping_term_ms = <200>;
 };
 

@@ -14,7 +14,7 @@
 #define RAISE      2       // raise_layer
 
 &mt {
-    tapping_term_ms = <400>;
+    tapping_term_ms = <200>;
 };
 
 / {

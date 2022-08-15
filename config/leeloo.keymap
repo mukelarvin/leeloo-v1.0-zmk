@@ -15,7 +15,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <250>;
+    tapping_term_ms = <400>;
 };
 
 / {
@@ -48,8 +48,8 @@
             bindings = <
 &none    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                           &kp N6       &kp N7      &kp N8     &kp N9     &kp N0     &none
 &kp ESC  &kp Q      &kp W      &kp E      &kp R      &kp T                            &mt LC(Y) Y  &kp U       &kp I      &kp O      &kp P      &kp BSLH
-&kp TAB  &mt  LGUI A  &mt  LALT S &mt  LCTRL D &mt LSHIFT F      &kp G                   &kp H        &mt RSHIFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
-&none  &mt LC(Z) Z      &mt LC(X) X      &mt LC(C) C      &mt LC(V) V  &kp B        &kp N        &kp M      &kp COMMA  &kp DOT    &kp FSLH   &none
+&kp CAPS  &mt  LGUI A  &mt  LALT S &mt  LCTRL D &mt LSHIFT F      &kp G                   &kp H    &mt RSHIFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
+&kp LSHFT  &mt LC(Z) Z      &mt LC(X) X      &mt LC(C) C      &mt LC(V) V  &kp B        &kp N        &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
                    &none   &lt RAISE ESC  &kp BSPC  &lt LOWER DEL &none    &none   &lt RAISE ENTER  &kp SPACE  &lt LOWER TAB   &none
             >;
 

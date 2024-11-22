@@ -1,8 +1,8 @@
 file_format: "1"
-id: leeloo
-name: Leeloo
+id: leelood
+name: Leelood
 type: shield
-url: https://clicketysplit.ca/pages/leeloo
+url: Nan
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
@@ -10,5 +10,7 @@ features:
   - display
   - encoder
 siblings:
-  - leeloo_left
-  - leeloo_right
+  - leelood_central
+  - leelood_left_central
+  - leelood_left
+  - leelood_right

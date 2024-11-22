@@ -1,0 +1,17 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_LEELOOD
+    bool
+
+config SHIELD_LEELOOD_CENTRAL
+    def_bool $(shields_list_contains,leelood_central)
+
+config SHIELD_LEELOOD_LEFT_CENTRAL
+    def_bool $(shields_list_contains,leelood_left_central)
+
+config SHIELD_LEELOOD_LEFT
+    def_bool $(shields_list_contains,leelood_left)
+
+config SHIELD_LEELOOD_RIGHT
+    def_bool $(shields_list_contains,leelood_right)

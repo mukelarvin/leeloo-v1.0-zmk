@@ -1,7 +1,7 @@
 # Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_LEELOO
+config SHIELD_LEELOO_DONGLE
     bool
 
 config SHIELD_LEELOO_CENTRAL_DONGLE

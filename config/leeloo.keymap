@@ -7,27 +7,25 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <interfaces/hid-trackball.dtsi>
 
 // Layers
 #define DEFAULT    0       // default_layer
 #define LOWER      1       // lower_layer
 #define RAISE      2       // raise_layer
+#define MOUSE (3) // mouse_layer
 
 &mt {
     flavor = "tap-preferred";
     tapping_term_ms = <400>;
 };
 
-/*
- * Assign the cs-gpios pin to 4.
- * Uncomment these next few lines if implementing nice!view Displays
- * A wire from the nice!view CS display needs to be connected to the
- * High Frequency P0.22, also known as D4 if you choose to refer to
- * the pins with Arduino Labels.
- */
-//nice_view_spi: &spi0 {
-//  cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
-//};
+&hid_trackball_interface {
+    automouse-layer = <3>;
+    automouse-layer-timeout-ms = <600>;
+    // scroll-layers = <3>;
+    // snipe-layers = <3>;
+};
 
 / {
 
@@ -70,6 +68,19 @@
                                  &trans     &trans     &trans     &trans     &trans     &trans        &trans    &trans
             >;
 
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        mouse_layer {
+            display-name = " Mouse";
+            bindings = <
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                        &trans     &trans     &trans     &tb_mo_scroll     &trans     &trans     &trans     &trans
+            >;
+        
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
